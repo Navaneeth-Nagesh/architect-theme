@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.upfold {
+  background-color: #eee;
+  width: 100%;
+  height: 110vh; }
+
+.wrapper {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  box-sizing: border-box; }
+  @media only screen and (max-device-width: 480px) {
+    .wrapper {
+      height: 50vh; } }
+
+.container {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  height: auto; }
+  @media only screen and (max-device-width: 480px) {
+    .container {
+      width: 120%; } }
+
+.house {
+  cursor: pointer;
+  font-size: 30px;
+  font-family: 'Oak', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700; }
+  .house .bg-fill {
+    opacity: 0;
+    transition: opacity 0.3s ease-in; }
+  .house text {
+    fill: #333;
+    transition: fill 0.3s ease-in; }
+  .house:hover .bg-fill, .house.active .bg-fill {
+    opacity: 1; }
+  .house:hover text, .house.active text {
+    fill: #333; }
+
+.text-box {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60px; }
+  .text-box .split {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Spectral SC', serif;
+    text-align: center;
+    line-height: 1.5;
+    opacity: 0;
+    animation: 2s upfold-text-animate forwards;
+    animation-delay: 400ms; }
+    @media only screen and (max-device-width: 480px) {
+      .text-box .split {
+        width: 100%; } }
+
+@keyframes upfold-text-animate {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.75; }
+  100% {
+    opacity: 1; } }
+.gallery {
+  width: 100%; }
+  .gallery h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    margin: 30px auto;
+    font-size: 35px; }
+  .gallery .owl-carousel {
+    width: 100%; }
+    .gallery .owl-carousel .img-section {
+      width: 90%; }
+      .gallery .owl-carousel .img-section figure figcaption {
+        text-align: center;
+        font-size: 15px;
+        text-transform: capitalize;
+        shape-margin: 10px; }
+
+.contact {
+  margin: 25px auto;
+  height: 25vh;
+  position: relative; }
+  .contact .contact-header {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    margin: 30px auto;
+    font-size: 35px;
+    cursor: pointer; }
+  .contact .contact-container {
+    display: none;
+    position: relative; }
+    .contact .contact-container .social {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      text-align: center; }
+      @media only screen and (max-device-width: 480px) {
+        .contact .contact-container .social {
+          width: 100%; } }
+      .contact .contact-container .social li {
+        display: inline-block;
+        margin: 10px;
+        list-style: none;
+        width: 50px;
+        cursor: pointer;
+        overflow: hidden;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: white;
+        transition: 400ms background-color ease, 400ms border-color ease; }
+        .contact .contact-container .social li:hover {
+          background-color: black;
+          border-color: white; }
+          .contact .contact-container .social li:hover .fa {
+            color: white; }
+        .contact .contact-container .social li a {
+          color: black; }
+          .contact .contact-container .social li a .fa {
+            padding-top: 12px;
+            font-size: 25px;
+            transition: 400ms color ease; }
+    .contact .contact-container address {
+      text-align: center; }
+      .contact .contact-container address a {
+        text-decoration: none;
+        font-size: 20px;
+        color: black; }
+
+.footer {
+  background-color: black;
+  height: 80px; }
+  .footer p {
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+    font-family: sans-serif; }
+
+.bottom-line {
+  height: 5px;
+  width: 100%;
+  display: flex; }
+  .bottom-line .green {
+    background-color: red;
+    height: 5px;
+    width: 35%; }
+  .bottom-line .red {
+    height: 5px;
+    width: 35%;
+    background-color: green; }
+  .bottom-line .yellow {
+    background-color: yellow;
+    height: 5px;
+    width: 30%; }
+
+/*# sourceMappingURL=style.css.map */

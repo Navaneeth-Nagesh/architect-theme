@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.upfold {
+    background-color: #eee;
+    width: 100%;
+    height: 110vh;
+}
+
+// cover SVG 
+.wrapper {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    box-sizing: border-box;
+    @media only screen and (max-device-width: 480px) {
+        height: 50vh;
+    }
+}
+
+.container {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+    @media only screen and (max-device-width: 480px) {
+        width: 120%;
+    }
+}
+
+.house {
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'Oak', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    .bg-fill {
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
+    }
+    text {
+        fill: #333;
+        transition: fill 0.3s ease-in;
+    }
+    &:hover,
+    &.active {
+        .bg-fill {
+            opacity: 1;
+        }
+        text {
+            fill: #333;
+        }
+    }
+}
+
+// text-box
+.text-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 60px;
+    .split {
+        width: 50%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-family: 'Spectral SC', serif;
+        text-align: center;
+        line-height: 1.5;
+        opacity: 0;
+        animation: 2s upfold-text-animate forwards;
+        animation-delay: 400ms;
+        @media only screen and (max-device-width: 480px) {
+            width: 100%;
+        }
+    }
+}
+
+@keyframes upfold-text-animate {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.gallery {
+    width: 100%;
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Poiret One', cursive;
+        margin: 30px auto;
+        font-size: 35px;
+    }
+    .owl-carousel {
+        width: 100%;
+        .img-section {
+            width: 90%;
+            figure {
+                img {
+                }
+                figcaption {
+                    text-align: center;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    shape-margin: 10px;
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    margin: 25px auto;
+    height: 25vh;
+    position: relative;
+    .contact-header {
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Poiret One', cursive;
+        margin: 30px auto;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    .contact-container {
+        display: none;
+        position: relative;
+        .social {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+            @media only screen and (max-device-width: 480px) {
+                width: 100%;
+            }
+            li {
+                display: inline-block;
+                margin: 10px;
+                list-style: none;
+                width: 50px;
+                cursor: pointer;
+                overflow: hidden;
+                height: 50px;
+                border: 1px solid black;
+                border-radius: 50%;
+                background-color: white;
+                transition: 400ms background-color ease, 400ms border-color ease;
+                &:hover {
+                    background-color: black;
+                    border-color: white;
+                    .fa {
+                        color: white;
+                    }
+                }
+                a {
+                    color: black;
+                    .fa {
+                        padding-top: 12px;
+                        font-size: 25px;
+                        transition: 400ms color ease;
+                    }
+                }
+            }
+        }
+        address {
+            text-align: center;
+            a {
+                text-decoration: none;
+                font-size: 20px;
+                color: black;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: black;
+    height: 80px;
+    p {
+        color: white;
+        padding-top: 30px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+}
+
+.bottom-line {
+    height: 5px;
+    width: 100%;
+    display: flex;
+    .green {
+        background-color: red;
+        height: 5px;
+        width: 35%;
+    }
+    .red {
+        height: 5px;
+        width: 35%;
+        background-color: green;
+    }
+    .yellow {
+        background-color: yellow;
+        height: 5px;
+        width: 30%;
+    }
+}
